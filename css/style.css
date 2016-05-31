@@ -83,6 +83,7 @@ p {
   font-size: 14px;
   color: #333;
   line-height: 21px;
+  word-wrap: break-word;
 }
 
 a {
@@ -191,6 +192,9 @@ span {
   }
   .welcome-message {
     display: none;
+  }
+  img {
+    max-width: 400px;
   }
 }
 
