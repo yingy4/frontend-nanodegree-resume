@@ -195,6 +195,7 @@ education.display = function() {
 			$(".online-entry:last").append(HTMLonlineTitle.replace("%data%",education.onlineCourses[k].title)+HTMLonlineSchool.replace("%data%",education.onlineCourses[k].school));
 			$(".online-entry:last").find('a').attr('href',education.onlineCourses[k].url);
 			$(".online-entry:last").append(HTMLonlineDates.replace("%data%",education.onlineCourses[k].date));
+			$(".online-entry:last").append(HTMLonlineURL.replace("%data%",education.onlineCourses[k].url));
 		}
 	}
 };
