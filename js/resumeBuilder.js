@@ -147,7 +147,7 @@ $("#main").append(internationalizeButton);
 function inName(name) {
 	var names = name.split(" ");
 	return names[0].slice(0,1).toUpperCase()+names[0].slice(1).toLowerCase()+" "+names[1].toUpperCase();
-};
+}
 
 project.display = function() {
 	if (project.projects.length > 0) {
@@ -181,6 +181,16 @@ education.display = function() {
 					$(".education-entry:last").append(HTMLschoolMajor.replace("%data%",education.schools[i].majors[j]));
 				}
 			}
+		}
+	}
+
+	if (education.onlineCourses.length > 0) {
+		$("#education").append(HTMLonlineClasses);
+		for (var k in education.onlineCourses) {
+			$("#education").append(HTMLonlineStart);
+			$(".online-entry:last").append(HTMLonlineTitle.replace("%data%",education.onlineCourses[k].title)+HTMLonlineSchool.replace("%data%",education.onlineCourses[k].school));
+			$(".online-entry:last").find('a').attr('href',education.onlineCourses[k].url);
+			$(".online-entry:last").append(HTMLonlineDates.replace("%data%",education.onlineCourses[k].dates));
 		}
 	}
 };
