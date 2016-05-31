@@ -90,7 +90,7 @@ var education = {
 		{
 			"title" : "Front-End Web Developer Nanodegree",
 			"school" : "Udacity",
-			"dates" : "2006-2007",
+			"date" : "2006-2007",
 			"url" : "https://cn.udacity.com/"
 		},
 		{
